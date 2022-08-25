@@ -36,7 +36,7 @@ const Jobs = ({ data, setKeywords, keywords }) => {
 
   useEffect(() => {
     modifiedData();
-    SearchFunc();
+    // SearchFunc();
   }, [keywords]);
 
   return (
