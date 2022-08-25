@@ -30,7 +30,7 @@ function App() {
     <div>
       <div className="header"></div>
 
-      {/* <Search setSearchKeyword={setSearchKeyword} /> */}
+      <Search setSearchKeyword={setSearchKeyword} />
 
       {filterKeywords.length > 0 && (
         <Header

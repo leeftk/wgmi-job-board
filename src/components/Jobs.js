@@ -5,16 +5,16 @@ const Jobs = ({ data, setKeywords, keywords }) => {
   console.log(data);
   const [filteredData, setfilteredData] = useState([]);
 
-  // const SearchFunc = () => {
-  //   if (keywords.length > 0) {
-  //     const newData = filteredData.filter((d) => {
-  //       return d.position.toLocaleLowerCase().includes(keywords);
-  //     });
-  //     setfilteredData(newData);
-  //   } else {
-  //     setfilteredData(data);
-  //   }
-  // };
+  const SearchFunc = () => {
+    if (keywords.length > 0) {
+      const newData = filteredData.filter((d) => {
+        return d.position.toLocaleLowerCase().includes(keywords);
+      });
+      setfilteredData(newData);
+    } else {
+      setfilteredData(data);
+    }
+  };
 
   const modifiedData = () => {
       if (keywords) {
@@ -36,7 +36,7 @@ const Jobs = ({ data, setKeywords, keywords }) => {
 
   useEffect(() => {
     modifiedData();
-    // SearchFunc();
+    SearchFunc();
   }, [keywords]);
 
   return (
